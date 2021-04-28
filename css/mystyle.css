@@ -1,0 +1,442 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{/*グローバルセレクタ（全てのタグに係る）*/
+	padding: 0;
+	margin: 0;
+	/*余白を０にしてブラウザ毎の差異を無くす*/
+}
+ul{
+	list-style-type: none;
+	/*リストの・を消す*/
+}
+/*ここまでページ全体に係るスタイル*/
+
+/*ここからヘッダーのスタイル*/
+header{
+	height: 60vh;/*高さの指定*/
+	/*サイト名（ロゴ）の位置を縦横とも中央にする*/
+	display: flex;/*子要素を横並びにする*/
+	justify-content: center;/*横位置中央*/
+	align-items: center;/*縦位置中央*/
+	
+	/*背景画像のパララックス効果*/
+	background-attachment: fixed;
+	/*背景画像をスクロールさせない*/
+	background-position: center center;
+	/*どんな広さの画面で見ても画像の中央が表示
+	されるようにする*/
+	background-repeat: no-repeat;
+	/*背景画像を繰り返し表示させない*/
+	background-size: cover;
+	/*背景画像を画面に合わせて縮小させる*/
+}
+
+
+/*===============================================
+●スマホ用CSS  画面の横幅が640px以下のとき
+===============================================*/
+@media screen and (max-width:640px){
+h1{
+	font-size: large;/*文字サイズの指定*/
+	color:#fff;/*文字色を白にする*/
+	text-shadow: 2px 2px 10px #333;
+	/*文字にドロップシャドウを掛ける*/
+	/*横のずれ、縦のずれ、輪郭のぼかし度合い、
+	影の色*/
+}
+/*ここまでヘッダーのスタイル*/
+
+/*ここからプロフィールのスタイル*/
+h2{/*見出しのスタイル*/
+	text-align: center;/*文字位置中央揃え*/
+	margin-top:20px;/*見出しの上の余白*/
+	margin-bottom: 20px;/*見出しの下の余白*/
+}
+#profile{
+	margin-bottom: 40px;
+	/*下のスキルとの間の余白*/
+}
+.prof_inner{
+	display: block;/*横並びを解除*/
+}
+.prof_inner p{
+	text-align: center;
+	/*プロフィール写真を中央配置にする*/
+}
+.prof_inner dl{
+	/*プロフィールの文章部のスタイル*/
+	margin-left:10px;
+	/*プロフィール写真との間に余白を開ける*/
+}
+.prof_inner dt{
+	/*プロフィールの項目名のスタイル*/
+	float: left;/*項目名と内容を横並びにする*/
+	margin-bottom: 15px;/*次の項目との余白*/
+}
+.prof_inner dd{
+	/*プロフィールの内容部のスタイル*/
+	margin-bottom: 15px;/*次の項目との余白*/
+}
+.prof_inner img{
+	max-width: 100%;
+	/*最大幅を制限させて縮小できるようにする*/
+	height: auto;/*縦横比率を保って縮小させる*/
+}
+/*ここまでプロフィールのスタイル*/
+
+/*ここからスキルのスタイル*/
+#skill{
+	background-color: #e0e0e0;
+	/*背景色の指定*/
+	padding-top: 20px;/*上側の余白*/
+	padding-bottom: 30px;/*下側の余白*/
+}
+.skill_inner li{
+	padding: 15px;/*内側の余白*/
+	text-align: center;
+	/*表示位置を中央揃えにする*/
+}
+/*ここまでスキルのスタイル*/
+
+/*ここから作品のスタイル*/
+.works_inner ul{
+	display: block;/*横並びを解除する*/
+}
+.works_inner li{
+	width: 90%;/*幅の指定*/
+	margin: auto auto;
+	/*各作品の表示を中央配置にする*/
+	box-sizing: border-box;
+	/*widthと余白の計算をしなくても
+	いいようにする*/
+	padding: 15px;/*内側の余白*/
+}
+.works_img{
+	text-align: center;
+	/*作品の画像を50%幅の中央に配置*/
+}
+.works_img img{
+	max-width: 100%;
+	/*最大幅を制限させて縮小できるようにする*/
+	height: auto;/*縦横比率を保って縮小させる*/
+}
+#works h3{
+	text-align: center;
+	/*作品名の見出しを中央配置にする*/
+}
+/*ここまで作品のスタイル*/
+
+/*ここからコンタクトのスタイル*/
+#contact{
+	background-color: #e0e0e0;
+	/*背景色の指定*/
+	text-align: center;
+	/*文字位置中央揃え*/
+	padding-top: 20px;/*上側の余白*/
+	padding-bottom: 50px;/*下側の余白*/
+}
+/*ここまでコンタクトのスタイル*/
+
+/*ここからフッターのスタイル*/
+footer{
+	background-color: #999;
+	/*背景色の指定*/
+	text-align: center;
+	/*文字位置中央揃え*/
+	padding: 30px;/*内側の余白*/
+}
+/*ここまでフッターのスタイル*/
+}
+
+/*===============================================
+●タブレット用CSS 画面の横幅が641以上、768px以下のとき
+===============================================*/
+@media screen and (min-width: 641px) and (max-width: 999px) {
+h1{
+	font-size: x-large;/*文字サイズの指定*/
+	color:#fff;/*文字色を白にする*/
+	text-shadow: 2px 2px 10px #333;
+	/*文字にドロップシャドウを掛ける*/
+	/*横のずれ、縦のずれ、輪郭のぼかし度合い、
+	影の色*/
+}
+/*ここまでヘッダーのスタイル*/
+
+/*ここからプロフィールのスタイル*/
+h2{/*見出しのスタイル*/
+	text-align: center;/*文字位置中央揃え*/
+	margin-top:20px;/*見出しの上の余白*/
+	margin-bottom: 20px;/*見出しの下の余白*/
+}
+#profile{
+	margin-bottom: 40px;
+	/*下のスキルとの間の余白*/
+}
+.prof_inner{
+	display: flex;/*子要素を横並びにする*/
+}
+.prof_inner dl{
+	/*プロフィールの文章部のスタイル*/
+	margin-left:10px;
+	/*プロフィール写真との間に余白を開ける*/
+}
+.prof_inner dt{
+	/*プロフィールの項目名のスタイル*/
+	float: left;/*項目名と内容を横並びにする*/
+	margin-bottom: 15px;/*次の項目との余白*/
+}
+.prof_inner dd{
+	/*プロフィールの内容部のスタイル*/
+	margin-bottom: 15px;/*次の項目との余白*/
+}
+.prof_inner img{
+	max-width: 100%;
+	/*最大幅を制限させて縮小できるようにする*/
+	height: auto;/*縦横比率を保って縮小させる*/
+}
+/*ここまでプロフィールのスタイル*/
+
+/*ここからスキルのスタイル*/
+#skill{
+	background-color: #e0e0e0;
+	/*背景色の指定*/
+	padding-top: 20px;/*上側の余白*/
+	padding-bottom: 30px;/*下側の余白*/
+}
+.skill_inner ul{
+	display: flex;
+	/*子要素を横並びにする*/
+	flex-wrap: wrap;
+}
+.skill_inner li{
+	width: 33.33%;/*幅の指定*/
+	box-sizing: border-box;
+	padding: 15px;/*内側の余白*/
+	text-align: center;
+	/*表示位置を中央揃えにする*/
+	margin-bottom: 50px;
+}
+/*ここまでスキルのスタイル*/
+
+/*ここから作品のスタイル*/
+.works_inner ul{
+	display: flex;/*子要素を横並びにする*/
+	flex-wrap: wrap;
+	/*作品を増やした時に1000pxに入りきら
+	なくなったら段落ちさせる*/
+}
+.works_inner li{
+	width: 50%;/*幅の指定*/
+	box-sizing: border-box;
+	/*widthと余白の計算をしなくても
+	いいようにする*/
+	padding: 15px;/*内側の余白*/
+	margin-bottom: 50px;
+}
+.works_img{
+	text-align: center;
+	/*作品の画像を50%幅の中央に配置*/
+}
+.works_img img{
+	max-width: 100%;
+	/*最大幅を制限させて縮小できるようにする*/
+	height: auto;/*縦横比率を保って縮小させる*/
+}
+#works h3{
+	text-align: center;
+	/*作品名の見出しを中央配置にする*/
+}
+/*ここまで作品のスタイル*/
+
+/*ここからコンタクトのスタイル*/
+#contact{
+	background-color: #e0e0e0;
+	/*背景色の指定*/
+	text-align: center;
+	/*文字位置中央揃え*/
+	padding-top: 20px;/*上側の余白*/
+	padding-bottom: 50px;/*下側の余白*/
+}
+/*ここまでコンタクトのスタイル*/
+
+/*ここからフッターのスタイル*/
+footer{
+	background-color: #999;
+	/*背景色の指定*/
+	text-align: center;
+	/*文字位置中央揃え*/
+	padding: 30px;/*内側の余白*/
+}
+/*ここまでフッターのスタイル*/
+}
+
+/*===============================================
+●ＰＣ用CSS 画面の横幅が769px以上のとき
+===============================================*/
+@media screen and (min-width : 1000px) {
+h1{
+	font-size: xx-large;/*文字サイズの指定*/
+	color:#fff;/*文字色を白にする*/
+	text-shadow: 2px 2px 10px #333;
+	/*文字にドロップシャドウを掛ける*/
+	/*横のずれ、縦のずれ、輪郭のぼかし度合い、
+	影の色*/
+}
+/*ここまでヘッダーのスタイル*/
+
+/*ここからナビのスタイル*/
+nav ul#menu{
+	width: 1000px;/*幅の指定*/
+	margin: auto auto;/*1000の幅を中央に表示*/
+	display: flex;/*子要素を横並びにする*/
+	height:60px;/*高さの指定*/
+}
+nav{
+	background-color: #fafafa;/*背景色の指定*/
+	height:60px;/*高さの指定*/
+}
+nav li a{/*リンクボタン１つずつのスタイル*/
+	width:200px;/*ボタン１つ分の幅*/
+	height: 60px;/*ボタン１つ分の高さ*/
+	text-align: center;
+	/*横方向の文字位置中央揃え*/
+	line-height: 60px;
+	/*縦方向の文字位置中央揃え*/
+	display: block;
+	/*<a>タグはインライン要素で幅・高さ
+	のスタイルが効かないので、ブロック
+	要素だとみなして効くようにする*/
+	color:#999;/*文字色の指定*/
+	text-decoration: none;
+	/*リンクの下線を消す*/
+	font-size: large;/*文字サイズの指定*/
+	box-sizing: border-box;
+	/*borderとwidthと余白の計算をしなくても
+	いいようにする*/
+}
+nav li a:hover{
+	border-bottom: #999 solid 1px;
+	/*ボタンの下に境界線を引く*/
+	color: #666;/*文字色を変更*/
+}
+/*ここまでナビのスタイル*/
+
+/*ここからプロフィールのスタイル*/
+h2{/*見出しのスタイル*/
+	text-align: center;/*文字位置中央揃え*/
+	margin-top:20px;/*見出しの上の余白*/
+	margin-bottom: 20px;/*見出しの下の余白*/
+	font-size: xx-large;/*文字サイズの指定*/
+}
+#profile{
+	margin-bottom: 40px;
+	/*下のスキルとの間の余白*/
+}
+.prof_inner{
+	width: 1000px;/*幅の指定*/
+	margin: auto auto;
+	/*1000pxを画面の中央に表示*/
+	display: flex;/*子要素を横並びにする*/
+}
+.prof_inner dl{
+	/*プロフィールの文章部のスタイル*/
+	margin-left:50px;
+	/*プロフィール写真との間に余白を開ける*/
+}
+.prof_inner dt{
+	/*プロフィールの項目名のスタイル*/
+	float: left;/*項目名と内容を横並びにする*/
+	width: 100px;/*幅の指定*/
+	margin-bottom: 15px;/*次の項目との余白*/
+}
+.prof_inner dd{
+	/*プロフィールの内容部のスタイル*/
+	margin-bottom: 15px;/*次の項目との余白*/
+}
+/*ここまでプロフィールのスタイル*/
+
+/*ここからスキルのスタイル*/
+#skill{
+	background-color: #e0e0e0;
+	/*背景色の指定*/
+	padding-top: 20px;/*上側の余白*/
+	padding-bottom: 30px;/*下側の余白*/
+}
+.skill_inner{
+	width: 1000px;/*幅の指定*/
+	margin: auto auto;
+	/*1000pxの幅を画面の中央に配置*/
+}
+.skill_inner ul{
+	display: flex;
+	/*子要素を横並びにする*/
+	flex-wrap: wrap;
+}
+.skill_inner li{
+	width: 33.33%;
+	box-sizing: border-box;
+	/*widthと余白の計算をしなくても
+	いいようにする*/
+	padding: 15px;/*内側の余白*/
+	text-align: center;
+	/*表示位置を中央揃えにする*/
+	margin-bottom: 50px;
+}
+/*ここまでスキルのスタイル*/
+
+/*ここから作品のスタイル*/
+.works_inner{
+	width: 1000px;/*幅の指定*/
+	margin: auto auto;
+	/*1000pxの幅を画面の中央に配置*/
+}
+.works_inner ul{
+	display: flex;/*子要素を横並びにする*/
+	flex-wrap: wrap;
+	/*作品を増やした時に1000pxに入りきら
+	なくなったら段落ちさせる*/
+}
+.works_inner li{
+	width: 33.33%;/*幅の指定*/
+	box-sizing: border-box;
+	/*widthと余白の計算をしなくても
+	いいようにする*/
+	padding: 15px;/*内側の余白*/
+	margin-bottom: 50px;
+}
+#works h3{
+	text-align: center;
+	/*作品名の見出しを中央配置にする*/
+}
+.works_img{
+	text-align: center;
+}
+/*ここまで作品のスタイル*/
+
+/*ここからコンタクトのスタイル*/
+#contact{
+	background-color: #e0e0e0;
+	/*背景色の指定*/
+	text-align: center;
+	/*文字位置中央揃え*/
+	padding-top: 20px;/*上側の余白*/
+	padding-bottom: 50px;/*下側の余白*/
+}
+/*ここまでコンタクトのスタイル*/
+
+/*ここからフッターのスタイル*/
+footer{
+	background-color: #999;
+	/*背景色の指定*/
+	text-align: center;
+	/*文字位置中央揃え*/
+	padding: 30px;/*内側の余白*/
+}
+/*ここまでフッターのスタイル*/
+}
+
+
+
+
+
