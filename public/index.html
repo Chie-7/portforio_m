@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>Chieko Muraoka's Portfolio</title>
+    <link href="css/mystyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.css" />
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but my-cli doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="container"><!--ここからcontainer-->
+      <header><!--ここからheader-->
+      <h1>Chieko Muraoka Portfolio Site</h1>
+    </header><!--ここまでheader-->
+  
+      <nav><!--ここからnav-->
+      <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav><!--ここまでnav-->
+    <main>
+
+    <!--ここに「App.vue」と「Portfolio.vue」の中身が表示される-->
+    <div id="app"></div>
+
+    <div id="contact"><!--ここからcontact-->
+			<h2>Contact</h2>
+
+			<p>メールにてお問い合わせください</p>
+			<p><a href="mailto:cmuraoka21@gmail.com">cmuraoka21@gmail.com</a></p>
+		</div><!--ここまでcontact-->
+  </main><!--ここまでmain-->
+  <footer><!--ここからfooter-->
+	<p>Copyright &copy; Chieko Muraoka. All Rights Reserved.</p>
+	</footer><!--ここまでfooter-->
+</div><!--ここまでcontainer-->
+
+<!--ここからjQueryの使用-->
+<script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+<!--ここからハンバーガーメニュー-->
+<script src="js/jquery.slicknav.min.js"></script>
+<script>
+	jQuery(function($){
+		$('#menu').slicknav({
+			label: '',//MENUの文字を消す
+			prependTo:'nav'//<nav>タグの位置に表示
+		});
+		//ここからハンバーガーアイコンを×に変える
+		$(".slicknav_btn").click(function(){
+			$(this).toggleClass("active");
+		});
+	});
+</script>
+
+<!--ここからスムーズスクロール-->
+<script type="text/javascript" src="js/smooth-scroll.polyfills.min.js"></script>
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+
+<!--ここからbgswitcher-->
+<script type="text/javascript" src="js/jquery.bgswitcher.js"></script>
+<script>
+	jQuery(function($) {
+		$('header').bgSwitcher({
+			images: ['images/bg1.jpg','images/bg2.jpg','images/bg3.jpg','images/bg4.jpg'], // 切り替える背景画像を指定
+		});
+	});
+	</script>
+    
+    </div><!--ここまで#container-->
+    <!-- built files will be auto injected -->
+  </body>
+</html>
